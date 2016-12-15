@@ -7,6 +7,7 @@ import store from './store'
 import App from './App'
 import Home from './components/Home'
 import TimeEntries from './components/TimeEntries'
+import LogTime from './components/LogTime'
 import 'bootstrap/dist/css/bootstrap.css'
 
 Vue.use(VueRouter)
@@ -28,7 +29,7 @@ const routes = [
       {
         path: 'log-time',
         // 懒加载
-        component: resolve => require(['./components/LogTime', resolve])
+        component: LogTime,
       }
     ]
   }
@@ -36,7 +37,6 @@ const routes = [
 
 const router = new VueRouter({routes})
 
-/* eslint-disable no-new */
 var app = new Vue({
   el: '#app',
   router,

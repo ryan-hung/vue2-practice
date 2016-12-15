@@ -63,7 +63,7 @@
                 // 减去总时间
                 this.$store.dispatch('decTotalTime', this.plans[index].totalTime)
                 // 删除该计划
-                this.$store.dispath('deletePlan', index)
+                this.$store.dispatch('deletePlan', index)
             }
         }
     }
